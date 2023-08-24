@@ -49,8 +49,20 @@ for (const member of ourTeam) {
 // }
 
 // #BONUS1: make pic link show as actual pic
+// for (const member of ourTeam) {
+//   targetContainer.innerHTML += `Name: ${member.name} <br>`;
+//   targetContainer.innerHTML += `Role: ${member.role} <br>`;
+//   targetContainer.innerHTML += `<img src="../img/${member.pic}"><br><br>`;
+// }
+
+// #BONUS2: organise members in cards
 for (const member of ourTeam) {
-  targetContainer.innerHTML += `Name: ${member.name} <br>`;
-  targetContainer.innerHTML += `Role: ${member.role} <br>`;
-  targetContainer.innerHTML += `<img src="../img/${member.pic}"><br><br>`;
+  targetContainer.innerHTML += `
+    <div class="card" style="width: 18rem;">
+    <img src="../img/${member.pic}" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">${member.name}</h5>
+      <p class="card-text">${member.role}</p>
+    </div>
+  </div>`;
 }
