@@ -42,8 +42,15 @@ for (const member of ourTeam) {
 }
 
 // print the same info on the DOM as strings
+// for (const member of ourTeam) {
+//   targetContainer.innerHTML += `Name: ${member.name} <br>`;
+//   targetContainer.innerHTML += `Role: ${member.role} <br>`;
+//   targetContainer.innerHTML += `Pic link: ${member.pic} <br><br>`;
+// }
+
+// #BONUS1: make pic link show as actual pic
 for (const member of ourTeam) {
   targetContainer.innerHTML += `Name: ${member.name} <br>`;
   targetContainer.innerHTML += `Role: ${member.role} <br>`;
-  targetContainer.innerHTML += `Pic link: ${member.pic} <br><br>`;
+  targetContainer.innerHTML += `<img src="../img/${member.pic}"><br><br>`;
 }
