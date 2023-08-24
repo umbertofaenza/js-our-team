@@ -58,7 +58,7 @@ for (const member of ourTeam) {
 // #BONUS2: organise members in cards
 for (const member of ourTeam) {
   targetContainer.innerHTML += `
-    <div class="card" style="width: 18rem;">
+    <div class="card mb-5" style="width: 18rem;">
     <img src="../img/${member.pic}" class="card-img-top">
     <div class="card-body">
       <h5 class="card-title">${member.name}</h5>
