@@ -1,10 +1,12 @@
+const targetContainer = document.getElementById("par-container");
+
 // create array of objects
 const ourTeam = [
-  (member1 = {
+  {
     name: "Wayne Barnett",
     role: "Founder & CEO",
     pic: "wayne-barnett-founder-ceo.jpg",
-  }),
+  },
   {
     name: "Angela Caroll",
     role: "Chief Editor",
@@ -34,9 +36,14 @@ const ourTeam = [
 
 // print on console: name, role and pic(string) for each member of the team
 for (const member of ourTeam) {
-  for (let memberProps in member) {
-    console.log(member[memberProps]);
+  for (let attribute in member) {
+    console.log(member[attribute]);
   }
 }
 
-// !TODO: print the same info on the DOM as strings
+// print the same info on the DOM as strings
+for (const member of ourTeam) {
+  targetContainer.innerHTML += `Name: ${member.name} <br>`;
+  targetContainer.innerHTML += `Role: ${member.role} <br>`;
+  targetContainer.innerHTML += `Pic link: ${member.pic} <br><br>`;
+}
